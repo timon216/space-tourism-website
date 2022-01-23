@@ -496,10 +496,10 @@ body {
 .grid-container--destination {
     --flow-space: 2rem;
     grid-template-areas: 
-    "title"
-    "image"
-    "tabs"
-    "content";
+        "title"
+        "image"
+        "tabs"
+        "content";
 }
 
 .grid-container--destination > img {
@@ -522,6 +522,10 @@ body {
     margin-top: 2.5rem;
 }
 
+.destination-meta p {
+    font-size: 1.75rem;
+}
+
 @media (min-width: 35em) {
     .numbered-title {
         justify-self: start;
@@ -535,22 +539,54 @@ body {
 }
 
 @media (min-width: 45em) {
-    .grid-container {
+    .grid-container--home {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(1rem, 1fr);
     }
 
-    .grid-container > *:first-child {
-        grid-column: 2;
-    }
-    
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
-
     .grid-container--home {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
+    }
+
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
+    
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+    }
+
+    /* Method showed in tutorial, grid template areas with dot notation didn't work. Also the two above with :first and :last-child on grid-container broke the destination page */
+    .grid-container--destination {
+        justify-items: start;
+        align-content: start;
+        text-align: left;
+        column-gap: var(--container-gap, 10rem);
+        grid-template-columns: repeat(2, minmax(0px, 80rem));
+        grid-template-areas: 
+            "title title"
+            "image tabs"
+            "image content";
+        margin-inline: 10vw;
+    }
+
+    .tab-list {
+        padding-left: 0;
+    }
+
+    .grid-container--destination img {
+        justify-self: center;
+        max-width: 90%;
+    }
+
+    .destination-info {
+        margin: 0px;
+    }
+
+    .destination-meta {
+        --gap: 6rem;
+        justify-content: start;
     }
 }
