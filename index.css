@@ -144,7 +144,10 @@ select {
 /* .flow > * + * */
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
-    /* outline: 1px solid red; */
+}
+
+.flow--space-small {
+    --flow-space: .75rem;
 }
 
 .container {
@@ -381,9 +384,10 @@ select {
 
 .underline-indicators > * {
     cursor: pointer;
-    padding: var(--underline-gap, 1rem) 0;
+    padding: var(--underline-gap, .65rem) 0;
     border: 0;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+    background-color: transparent;
 }
 
 /* *:hover and *:focus didn't work */
@@ -516,7 +520,7 @@ body {
     text-align: center;
     display: grid;
     place-items: center;
-    padding-inline: 1rem;
+    padding-inline: 2rem;
     padding-bottom: 3rem;
 }
 
@@ -588,10 +592,6 @@ body {
 
 .grid-container--crew h2 {
     color: hsl( var(--clr-white) / .5 );
-}
-
-.grid-container--crew .name {
-    padding-block: min(2vw, 2rem);
 }
 
 .crew-details {
