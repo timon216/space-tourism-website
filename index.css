@@ -526,6 +526,42 @@ body {
     font-size: 1.75rem;
 }
 
+/* crew layout */
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas:
+        "title"
+        "image"
+        "dots"
+        "content";
+}
+
+.grid-container--crew > img {
+    grid-area: image;
+    max-width: 60%;
+    border-bottom: 1px solid hsl( var(--clr-white) / .15 );
+}
+
+.grid-container--crew > .dot-indicators {
+    grid-area: dots;
+}
+
+.grid-container--crew > .crew-info {
+    grid-area: content;
+}
+
+.grid-container--crew h2 {
+    color: hsl( var(--clr-white) / .5 );
+}
+
+.grid-container--crew .name {
+    padding-block: min(2vw, 2rem);
+}
+
+.crew-details {
+    color: hsl( var(--clr-light) );
+}
+
 @media (min-width: 35em) {
     .numbered-title {
         justify-self: start;
@@ -536,6 +572,15 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    .grid-container--crew {
+        padding-bottom: 0;
+        grid-template-areas: 
+            "title"
+            "content"
+            "dots"
+            "image";
+    }
 }
 
 @media (min-width: 45em) {
@@ -543,9 +588,6 @@ body {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(1rem, 1fr);
-    }
-
-    .grid-container--home {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
     }
@@ -576,7 +618,8 @@ body {
         padding-left: 0;
     }
 
-    .grid-container--destination img {
+    .grid-container--destination img,
+    .grid-container--crew img {
         justify-self: center;
         max-width: 90%;
     }
@@ -588,5 +631,26 @@ body {
     .destination-meta {
         --gap: min(5vw, 6rem);
         justify-content: start;
+    }
+
+    .grid-container--crew {
+        justify-items: start;
+        align-content: start;
+        text-align: left;
+        column-gap: var(--container-gap, 10rem);
+        grid-template-columns: repeat(2, minmax(0px, 80rem));
+        grid-template-areas: 
+            "title image"
+            "content image"
+            "dots image";
+        margin-inline: 10vw;
+    }
+
+    .crew-info {
+        margin: 0px;
+    }
+
+    .grid-container--crew > .dot-indicators {
+        justify-self: start;
     }
 }
