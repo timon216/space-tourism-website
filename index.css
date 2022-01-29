@@ -472,6 +472,42 @@ body {
     }
 }
 
+/* destination page */
+.destination {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
+@media (min-width: 35em) {
+    .destination {
+        background-position: center center;
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+}   
+
+@media (min-width: 45em) {
+    .destination {
+        background-image: url(./assets/destination/background-destination-desktop.jpg);
+    }
+}
+
+/* crew page */
+.crew {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+}
+
+@media (min-width: 35em) {
+    .crew {
+        background-position: center center;
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
+}   
+
+@media (min-width: 45em) {
+    .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+}
+
 /* -------------------------- */
 /* Layout                     */
 /* -------------------------- */
@@ -635,7 +671,7 @@ body {
 
     .grid-container--crew {
         justify-items: start;
-        align-content: start;
+        align-content: space-around;
         text-align: left;
         column-gap: var(--container-gap, 10rem);
         grid-template-columns: repeat(2, minmax(0px, 80rem));
@@ -652,5 +688,6 @@ body {
 
     .grid-container--crew > .dot-indicators {
         justify-self: start;
+        padding-bottom: 4rem;
     }
 }
