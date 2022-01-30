@@ -121,6 +121,9 @@ select {
     }
 }
 
+/* hidden elementa */
+[hidden] { display: none !important; }
+
 
 /* -------------------------- */
 /* Utility classes            */
