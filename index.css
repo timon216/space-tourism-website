@@ -655,6 +655,7 @@ body {
 
     .tab-list {
         padding-left: 0;
+        padding-bottom: 2rem;
     }
 
     .grid-container--destination picture,
