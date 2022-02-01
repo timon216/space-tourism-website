@@ -92,6 +92,8 @@ body {
     grid-template-rows: min-content 1fr;
 
     overflow-x: hidden;
+
+    scrollbar-gutter: stable both-edges;
 }
 
 /* make images easier to work with */
@@ -548,6 +550,8 @@ body {
 .grid-container--destination > picture {
     grid-area: image;
     max-width: 60%;
+    align-self: start;
+    padding-top: 2rem;
 }
 
 .grid-container--destination > .tab-list {
