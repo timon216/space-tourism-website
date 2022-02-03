@@ -17,7 +17,9 @@ This solution is based on the guidance of Kevin Powell and his course [Build a s
 
 This is my first "bigger" project. I decided to base my solution on Kevin Powell's tutorial because I wanted to see what it looks like to create a full page with subpages from beginning to the end. If I did it myself from scratch, I would change a few things - mostly the order of doing things because sometimes I was confused with jumping from topic to topic, when it came to writing a commit.
 
-The figma files with full design can be downloaded from [Scrimba](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub/space-tourism-multipage-website-Q_r2tiq43) page.
+The Figma or Sketch files with full design can be downloaded from [Scrimba](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub/space-tourism-multipage-website-Q_r2tiq43) page.
+
+The demo version you can see [here](https://timon216.github.io/space-tourism-website/index.html).
 
 ### The challenge
 
@@ -37,7 +39,7 @@ Users should be able to:
 - Mobile-first workflow
 - JS
 
-### What I learnt
+### What I learned
 
 - how to make and use custom properties
 - remember about a11y
